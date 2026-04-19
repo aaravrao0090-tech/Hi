@@ -248,3 +248,16 @@ footer {
     font-size: 1.4rem;
   }
 }
+.card-placeholder {
+  width: 100%;
+  height: 220px;
+  border-radius: 12px;
+  background: #3a0000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  color: #d4d4d4;
+  font-weight: 600;
+  text-align: center;
+}
