@@ -2,119 +2,104 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(180deg, #120000, #1b0000, #0d0d11);
+  background: linear-gradient(135deg, #1a0000, #2b0000);
   color: white;
   overflow-x: hidden;
-}
-
-/* 🔥 FLOATING SHOES (NOW WITH TWITCH) */
-.floating-shoe {
-  position: fixed;
-  width: 90px;
-  z-index: 1;
-  pointer-events: none;
-  opacity: 0.9;
-
-  animation: twitch 0.18s infinite;
-}
-
-.shoe1 {
-  top: 20%;
-  left: 3%;
-  animation-delay: 0s;
-}
-
-.shoe2 {
-  top: 20%;
-  right: 3%;
-  animation-delay: 0.05s;
-}
-
-.shoe3 {
-  bottom: 20%;
-  left: 3%;
-  animation-delay: 0.1s;
-}
-
-.shoe4 {
-  bottom: 20%;
-  right: 3%;
-  animation-delay: 0.15s;
-}
-
-/* ⚡ TWITCH ANIMATION */
-@keyframes twitch {
-  0%   { transform: translateX(0); }
-  20%  { transform: translateX(-3px); }
-  40%  { transform: translateX(3px); }
-  60%  { transform: translateX(-2px); }
-  80%  { transform: translateX(2px); }
-  100% { transform: translateX(0); }
 }
 
 /* HEADER */
 .topbar {
   display: flex;
   justify-content: space-between;
-  padding: 15px 25px;
-  background: rgba(30,0,0,0.9);
+  padding: 20px 30px;
+  background: rgba(0,0,0,0.4);
 }
 
 .logo {
-  font-weight: 800;
-  font-size: 1.3rem;
+  font-weight: 700;
+  font-size: 1.5rem;
 }
 
 .nav a {
-  margin-left: 15px;
   color: white;
+  margin-left: 20px;
   text-decoration: none;
 }
 
 /* HERO */
 .hero {
   text-align: center;
-  padding: 60px 20px;
+  padding: 80px 20px;
 }
 
 .hero h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 
-/* PRODUCTS GRID */
+.hero-btn {
+  margin-top: 20px;
+  display: inline-block;
+  padding: 12px 20px;
+  background: red;
+  border-radius: 8px;
+  color: white;
+  text-decoration: none;
+}
+
+/* GRID */
 .products-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
-  padding: 20px;
+  padding: 30px;
 }
 
+/* CARD */
 .card {
-  background: #2a0000;
-  border-radius: 15px;
+  background: #2b0000;
   padding: 15px;
+  border-radius: 15px;
   text-align: center;
+  transition: 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
 }
 
 .card-img {
   width: 100%;
-  height: 200px;
+  height: 180px;
   object-fit: cover;
   border-radius: 10px;
 }
 
 .card-placeholder {
   width: 100%;
-  height: 200px;
+  height: 180px;
+  border-radius: 10px;
   background: #3a0000;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 10px;
+  color: #aaa;
+}
+
+.card h3 {
+  margin-top: 10px;
+}
+
+.card p {
+  color: #ccc;
+}
+
+.card-link {
+  text-decoration: none;
+  color: white;
 }
 
 /* PRODUCT PAGE */
@@ -125,43 +110,61 @@ body {
 }
 
 .product-box {
-  background: #2a0000;
+  background: #2b0000;
   padding: 20px;
   border-radius: 15px;
   text-align: center;
-  width: 400px;
+  max-width: 400px;
+  width: 100%;
 }
 
 .detail-img {
   width: 100%;
   border-radius: 10px;
-  margin-bottom: 15px;
 }
 
 .detail-placeholder {
   width: 100%;
   height: 250px;
+  border-radius: 10px;
   background: #3a0000;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 10px;
-  margin-bottom: 15px;
+  color: #aaa;
 }
 
-/* BUTTON */
-.support-btn {
-  display: inline-block;
-  background: white;
-  color: black;
-  padding: 10px 20px;
-  border-radius: 20px;
+.price {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.desc {
+  margin-bottom: 20px;
+}
+
+.back-link {
+  display: block;
+  margin-bottom: 10px;
+  color: #ccc;
   text-decoration: none;
 }
 
-/* MOBILE */
-@media (max-width: 700px) {
-  .products-grid {
-    grid-template-columns: 1fr;
-  }
+/* FLOATING SHOES */
+.floating-shoe {
+  position: fixed;
+  width: 80px;
+  z-index: 0;
+  animation: twitch 0.15s infinite;
+}
+
+.shoe1 { top: 10%; left: 5%; }
+.shoe2 { top: 20%; right: 5%; }
+.shoe3 { bottom: 15%; left: 10%; }
+.shoe4 { bottom: 10%; right: 10%; }
+
+@keyframes twitch {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(8px); }
+  100% { transform: translateX(0); }
 }
