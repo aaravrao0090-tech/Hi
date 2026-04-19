@@ -3,37 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Product 3 - Vibez Kicks</title>
+  <title>Glass Test</title>
   <link rel="stylesheet" href="styles.css">
+
+  <script src="https://www.paypal.com/sdk/js?client-id=BAAxqlIZEtVDOuf8lex0MDj3sj9ITzWibVxJzicH_Y8aEyaftwIJKjlcJY7KKVJkr9wT7BeOalfrsD9bO0&components=hosted-buttons&enable-funding=venmo&currency=USD"></script>
 </head>
+
 <body>
 
-  <img src="shoe1.png" class="floating-shoe shoe1" alt="shoe">
-  <img src="shoe2.png" class="floating-shoe shoe2" alt="shoe">
-  <img src="shoe3.png" class="floating-shoe shoe3" alt="shoe">
-  <img src="shoe4.png" class="floating-shoe shoe4" alt="shoe">
+<img src="shoe1.png" class="floating-shoe shoe1">
+<img src="shoe2.png" class="floating-shoe shoe2">
+<img src="shoe3.png" class="floating-shoe shoe3">
+<img src="shoe4.png" class="floating-shoe shoe4">
 
-  <header class="topbar">
-    <div class="logo">Vibez Kicks</div>
-    <nav class="nav">
-      <a href="index.html">Shop</a>
-      <a href="mailto:nher93631@gmail.com?subject=Vibez%20Kicks%20Support">Support</a>
-    </nav>
-  </header>
+<header class="topbar">
+  <div class="logo">Vibez Kicks</div>
+</header>
 
-  <section class="single-product-page">
-    <div class="product-box">
-      <a href="index.html" class="back-link">← Back to products</a>
-      <div class="detail-placeholder">No Image Yet</div>
-      <h2>Product 3 Name</h2>
-      <p class="price">$00.00</p>
-      <p class="desc">Description coming soon.</p>
-    </div>
-  </section>
+<section class="single-product-page">
+  <div class="product-box">
 
-  <footer>
-    <p>© 2026 Vibez Kicks. All rights reserved.</p>
-  </footer>
+    <a href="index.html" class="back-link">← Back</a>
+
+    <div class="detail-placeholder">Add Image Later</div>
+
+    <h2>Glass Test</h2>
+    <p class="price">Teams Now Me</p>
+    <p class="desc">Test product description</p>
+
+    <div id="paypal-container-Q3WPFF4DJYCG4"></div>
+
+    <script>
+      paypal.HostedButtons({
+        hostedButtonId: "Q3WPFF4DJYCG4",
+      }).render("#paypal-container-Q3WPFF4DJYCG4");
+    </script>
+
+  </div>
+</section>
 
 </body>
 </html>
