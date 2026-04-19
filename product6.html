@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product 6 - Vibez Kicks</title>
+
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- PayPal -->
+  <script src="https://www.paypal.com/sdk/js?client-id=BAAxqlIZEtVDOuf8lex0MDj3sj9ITzWibVxJzicH_Y8aEyaftwIJKjlcJY7KKVJkr9wT7BeOalfrsD9bO0&components=hosted-buttons&enable-funding=venmo&currency=USD"></script>
+</head>
+
+<body>
+
+  <header>
+    <h1>Vibez Kicks</h1>
+    <p>Premium sneakers. Real heat.</p>
+  </header>
+
+  <div class="support-wrap">
+    <a class="support-btn" href="mailto:nher93631@gmail.com?subject=Vibez%20Kicks%20Support">
+      Contact Support
+    </a>
+  </div>
+
+  <section class="single-product-page">
+    <div class="product-box">
+
+      <!-- Back button -->
+      <a href="index.html" class="back-link">← Back to products</a>
+
+      <!-- Image (leave blank for now if you want) -->
+      <img src="product6.jpg" class="detail-img" alt="Product 6">
+
+      <!-- Info -->
+      <h2>PRODUCT 6 NAME</h2>
+      <p class="price">$00.00</p>
+      <p class="desc">DESCRIPTION</p>
+
+      <!-- PayPal (replace later when ready) -->
+      <div id="paypal-container-product6"></div>
+      <script>
+        paypal.HostedButtons({
+          hostedButtonId: "REPLACE_PRODUCT_6_ID"
+        }).render("#paypal-container-product6");
+      </script>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Vibez Kicks</p>
+  </footer>
+
+</body>
+</html>
